@@ -7,6 +7,11 @@ for (let i = 0; i < 3; i++)
 {
 	subjects[i] = prompt("Mokomasis Dalykas: ")
 	marks[i] = prompt("Pažymys: ")
+	while (marks[i] < 1 || marks[i] > 10)
+	{
+		alert("Netinkamas Pažymys!!!!! (Pažymį veskite iš naujo)");
+		marks[i] = prompt("Pažymys: ");
+	}
 }
 console.log("Mokinys: " + name)
 console.log("Dalykai:")
